@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  HOW TO ADD A NEW BLOG POST TO THE MODUS SITE
+  ============================================================================
+  1. Duplicate this file inside the /blog folder and rename it , the file
+     name becomes the post's URL, so keep it short and hyphenated, e.g.:
+       blog/why-direct-contracting-works.html
+
+  2. Fill in the five <meta name="post-..."> tags below. Nothing else in
+     <head> matters , the site reads only those tags.
+
+  3. Write your article inside <main id="post-content">...</main> using
+     plain HTML: <p>, <h2>, <h3>, <ul>/<li>, <blockquote>, <img>, <a>.
+     Do not remove the id="post-content" , that's how the site finds your
+     article text and ignores everything else in this file.
+
+  4. Commit and push the file (or, on github.com, just drag the file into
+     the /blog folder in the web UI and click "Commit changes"). The
+     Resources page and this file's reader page both list whatever .html
+     files exist in /blog automatically , no other step, no rebuild.
+
+  5. To remove a post later, delete its file from /blog. It disappears
+     from the site the next time someone loads the page.
+
+  Files starting with "_" (like this one) are ignored by the listing, so
+  you can safely keep this template in the folder as a reference.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- ===== EDIT THESE FIVE LINES ===== -->
+<meta name="post-title" content="Your Post Title Here">
+<meta name="post-date" content="2026-09-18"><!-- YYYY-MM-DD, controls sort order -->
+<meta name="post-excerpt" content="One or two sentences that summarize the post , this is what shows on the card grid.">
+<meta name="post-cover" content=""><!-- optional: path or URL to a cover image, e.g. "images/my-cover.jpg". Leave blank for a plain Modus-branded card. -->
+<meta name="post-author" content="Modus Team">
+<!-- ================================== -->
+
+</head>
+<body>
+
+<main id="post-content">
+
+  <p>Start your article with a short opening paragraph. This is plain HTML, styled automatically to match the rest of the Modus site.</p>
+
+  <h2>Use H2 for section headings</h2>
+  <p>Write normally. Paragraphs, links, and lists all pick up the site's styling for free.</p>
+
+  <h3>Use H3 for sub-points</h3>
+  <ul>
+    <li>Bullet points work like this</li>
+    <li>And like this</li>
+  </ul>
+
+  <blockquote>A pulled quote looks like this.</blockquote>
+
+  <p>Add an image anywhere with a normal image tag, like <code>&lt;img src="images/example.jpg" alt="..."&gt;</code>. It will be sized and rounded to match the rest of the site automatically.</p>
+
+</main>
+
+</body>
+</html>

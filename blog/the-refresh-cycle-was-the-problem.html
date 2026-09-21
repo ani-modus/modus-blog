@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="post-title" content="The Directory Was Never the Problem. The Refresh Cycle Was.">
+<meta name="post-date" content="2026-09-25">
+<meta name="post-excerpt" content="A provider directory that's accurate in January and wrong by June isn't a data problem. It's a design problem, and the fix isn't a better spreadsheet.">
+<meta name="post-cover" content="">
+<meta name="post-author" content="Modus Team">
+
+</head>
+<body>
+
+<main id="post-content">
+
+  <p>Every provider directory starts accurate. Someone confirms a doctor's address, their accepted plans, their phone number, and publishes it. The problem isn't that first snapshot. The problem is what happens six months later, when the doctor has moved practices, stopped taking new patients, or quietly stopped accepting a plan they're still listed under.</p>
+
+  <p>Most directories don't fail because the data was wrong. They fail because nobody designed for the fact that healthcare data has a shelf life, and that shelf life is shorter than the refresh cycle.</p>
+
+  <h2>The static file was a reasonable answer to a question nobody asks anymore</h2>
+
+  <p>NPPES, the federal source most directories are still built on, is a self-reported registry. A provider updates it when they remember to, which in practice means rarely. It was a reasonable design in an era when directories were printed once a year. It is not a reasonable design for a system that's supposed to tell a patient, today, whether a doctor is actually taking them.</p>
+
+  <p>CMS itself recognized this. The new National Provider Directory replaced NPPES's static file with a live FHIR API, pulling identity, credentials, and organization affiliations directly from CMS's own systems in near real time. Modus was the first provider lookup tool to build on it. Not because it was the newest technology available, but because it closes the actual gap: the distance between when something changes and when your directory reflects it.</p>
+
+  <h2>An annual refresh is a promise you can't keep</h2>
+
+  <p>Say a directory is refreshed once a year and, in a given month, 1 to 2 percent of provider records change in some meaningful way, an address, a plan acceptance, a closed practice. By month eleven, that's not a small error rate anymore. It's a directory where a meaningful share of entries are quietly wrong, and nobody knows which ones until a patient calls a disconnected number or gets turned away at the front desk.</p>
+
+  <p>The fix that usually gets proposed is "refresh more often." That helps, but it treats the symptom. A quarterly refresh is still a directory that's wrong for up to three months at a time. The actual fix is removing the refresh cycle from the equation entirely, replacing a periodic snapshot with a live connection.</p>
+
+  <h2>What changes when the directory is alive instead of updated</h2>
+
+  <p>This is the part that's easy to undersell: a live directory isn't just "the same directory, but more current." It changes what you can build on top of it. Once identity and affiliation data updates continuously, you can layer real-time checks on top, license status, appointment availability, plan acceptance, confirmed the same day someone searches, not the same year.</p>
+
+  <p>That's the actual design principle behind Modus: the directory layer should be a foundation you never have to think about, not a maintenance project you own. Continuous checks for exclusions, sanctions, and sudden practice-pattern shifts run in the background, not on a schedule someone has to remember to run.</p>
+
+  <h2>The real cost of stale data isn't the bad lookup. It's the second call.</h2>
+
+  <p>A wrong entry in a directory rarely stops at one bad referral. It becomes a phone call to confirm the referral was even valid, a delayed appointment, sometimes a second referral to a different provider entirely. Every one of those steps costs time that a live, continuously verified directory was supposed to save in the first place.</p>
+
+  <p>The question worth asking about any provider directory isn't "how accurate is it." It's "how old is that accuracy." A directory that was correct in January and hasn't been checked since isn't really accurate today, it's just unverified. That distinction is the whole reason a static file was never going to be enough.</p>
+
+</main>
+
+</body>
+</html>
